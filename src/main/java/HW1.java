@@ -19,7 +19,9 @@ public class HW1 {
     public static void main(String[] args) {
         String property = System.getProperty("user.dir")+"/driver/chromedriver.exe";
         System.setProperty("webdriver.chrome.driver",property);
-        WebDriver driver = new ChromeDriver();
+        EventFiringWebDriver driver = new EventFiringWebDriver(new ChromeDriver());
+
+        driver.register( new EventHandler());
 
         driver.get("http://prestashop-automation.qatestlab.com.ua/admin147ajyvk0/");
 
@@ -74,7 +76,7 @@ public class HW1 {
         }
         else
         {
-            System.out.print("The element is not found");
+            System.out.println("The element is not found");
         }
         driver.quit();
     }

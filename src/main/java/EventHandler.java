@@ -25,11 +25,11 @@ public class EventHandler implements WebDriverEventListener{
     }
 
     public void beforeNavigateTo(String s, WebDriver webDriver) {
-
+System.out.println("Trying to navigate to the site");
     }
 
     public void afterNavigateTo(String s, WebDriver webDriver) {
-
+        System.out.println("Succesfull navigate to" + webDriver.getTitle());
     }
 
     public void beforeNavigateBack(WebDriver webDriver) {
@@ -57,19 +57,19 @@ public class EventHandler implements WebDriverEventListener{
     }
 
     public void beforeFindBy(By by, WebElement webElement, WebDriver webDriver) {
-System.out.println("looking for an element"+by);
+System.out.println("looking for an element: "+by);
     }
 
     public void afterFindBy(By by, WebElement webElement, WebDriver webDriver) {
-System.out.print("found element" + by);
+System.out.println("found element: " + by);
     }
 
     public void beforeClickOn(WebElement webElement, WebDriver webDriver) {
-
+System.out.println("Should click " + webElement.getText());
     }
 
     public void afterClickOn(WebElement webElement, WebDriver webDriver) {
-
+        System.out.println("Clicked successfull");
     }
 
     public void beforeChangeValueOf(WebElement webElement, WebDriver webDriver, CharSequence[] charSequences) {
