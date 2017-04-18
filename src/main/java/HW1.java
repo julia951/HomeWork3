@@ -40,7 +40,7 @@ public class HW1 {
         builder.moveToElement(catalog).build().perform();
 
         //enter the category
-        wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("subtab-AdminCategories")));
+        wait1.until(ExpectedConditions.visibilityOfElementLocated(By.id("subtab-AdminCategories")));
         WebElement subcatalog = driver.findElement(By.id("subtab-AdminCategories"));
         subcatalog.click();
 
